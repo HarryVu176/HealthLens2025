@@ -25,7 +25,7 @@ def login_ui():
                 st.session_state.user = result
                 st.session_state.authenticated = True
                 st.success("Login successful!")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error(result)
 
@@ -71,7 +71,7 @@ def logout():
     """Handle user logout"""
     st.session_state.user = None
     st.session_state.authenticated = False
-    st.experimental_rerun()
+    st.rerun()
 
 def auth_page():
     """Main authentication page that shows either login/register or user profile"""

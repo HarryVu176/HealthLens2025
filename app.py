@@ -23,7 +23,7 @@ else:
     if st.sidebar.button("Logout"):
         st.session_state.user = None
         st.session_state.authenticated = False
-        st.experimental_rerun()
+        st.rerun()
     
     if app_mode == "Prescription Scanner":
         st.title("Prescription Scanner")

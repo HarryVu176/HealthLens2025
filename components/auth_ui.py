@@ -1,4 +1,3 @@
-# components/auth_ui.py
 import streamlit as st
 from auth.auth_handler import AuthHandler
 

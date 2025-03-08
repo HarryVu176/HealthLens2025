@@ -1,4 +1,4 @@
-# auth/auth_handler.py
+from datetime import datetime
 import bcrypt
 from database.db_connection import Database
 from auth.user_model import User

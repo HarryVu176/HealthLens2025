@@ -1,6 +1,7 @@
 import sys
 import json
 import os
+from imageToText import ImageToFacts
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QLabel,
                              QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit,
                              QFrame, QFileDialog, QComboBox, QStackedWidget,
@@ -28,22 +29,26 @@ MATERIAL_TEXT_SECONDARY = "#757575"  # Medium gray text
 class GeminiClient:
     def analyze_prescription(self, image_path):
         # Mock response that would come from Gemini API
-        return """
-        Medication: Lisinopril 10mg
-
-        Instructions: Take one tablet by mouth once daily
-
-        Prescribing Doctor: Dr. Smith
-
-        Purpose: This medication is an ACE inhibitor used to treat high blood pressure and heart failure.
-
-        Common Side Effects:
-        - Dizziness
-        - Cough
-        - Headache
-
-        Take with or without food. Avoid potassium supplements.
-        """
+        imgToFact = ImageToFacts()
+        image = Image.open(image_path)
+        text = imgToFact.process(image)
+        return text
+        # return """
+        # Medication: Lisinopril 10mg
+        #
+        # Instructions: Take one tablet by mouth once daily
+        #
+        # Prescribing Doctor: Dr. Smith
+        #
+        # Purpose: This medication is an ACE inhibitor used to treat high blood pressure and heart failure.
+        #
+        # Common Side Effects:
+        # - Dizziness
+        # - Cough
+        # - Headache
+        #
+        # Take with or without food. Avoid potassium supplements.
+        # """
 
     def simplify_medical_text(self, medical_text):
         # Mock response for text simplification

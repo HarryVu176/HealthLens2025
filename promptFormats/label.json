@@ -1,0 +1,8 @@
+{
+	"name": "prescriptionName",
+	"dosage": "500mg",
+	"qty": "1",
+	"frequency": "per day OR NULL IF INFO NOT LISTED",
+	"pharmacy_address": "123 street",
+	"format": "tablet"
+}

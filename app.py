@@ -11,7 +11,7 @@ st.set_page_config(
 
 initialize_session_state()
 
-st.sidebar.title("Language Simplifier")
+st.sidebar.title("💊 Health Lens")
 
 # if not st.session_state.authenticated:
 #     auth_page()

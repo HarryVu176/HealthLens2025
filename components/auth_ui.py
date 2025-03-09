@@ -38,9 +38,9 @@ def register_ui():
         name = st.text_input("Name", key="register_name")
         password = st.text_input("Password", type="password", key="register_password")
         confirm_password = st.text_input("Confirm Password", type="password", key="confirm_password")
-        language = st.selectbox("Preferred Language", ["English", "Spanish", "French", "Chinese", "Arabic"], key="preferred_language")
+        language = st.selectbox("Preferred Language", ["English", "French", "Vietnamese", "Chinese"], key="preferred_language")
         
-        language_code = {"English": "en", "Spanish": "es", "French": "fr", "Chinese": "zh", "Arabic": "ar"}
+        language_code = {"English": "en", "French": "fr", "Vietnamese": "vi", "Chinese": "zh"}
         
         submit = st.form_submit_button("Register")
         
